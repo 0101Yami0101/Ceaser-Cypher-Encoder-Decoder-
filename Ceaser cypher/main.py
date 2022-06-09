@@ -36,11 +36,8 @@ while should_continue:
    text = input("Type your message:\n").lower()
    shift = int(input("Type the shift number:\n"))
 
-
-
-   shift = shift % 26  #If shift number is greater then 26(number of letters present), it takes modulus 
-
-
+   shift = shift % 26  #If shift number is greater then 26(number of letters present), it takes modulus (Bug- Doesn"t work for some numbers for some reason IDk why..
+   
    #Cypher Direction Check
    if direction == "encode":
       encrypt(plain_text=text,shift_amount=shift)
